@@ -14,8 +14,6 @@
 		8A5A9FC71AA2545E00D801E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A9FC61AA2545E00D801E8 /* Images.xcassets */; };
 		8A5A9FCA1AA2545E00D801E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A9FC81AA2545E00D801E8 /* LaunchScreen.xib */; };
 		8A5A9FD61AA2545E00D801E8 /* Nearby_PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FD51AA2545E00D801E8 /* Nearby_PeopleTests.swift */; };
-		8A5A9FE31AA261B400D801E8 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FE21AA261B400D801E8 /* PeopleViewController.swift */; };
-		8A5A9FE61AA2640100D801E8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FE51AA2640100D801E8 /* FacebookSDK.framework */; };
 		8A5A9FE91AA26ADC00D801E8 /* BridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FE81AA26ADC00D801E8 /* BridgingHeader.m */; };
 		8A5A9FEC1AA294E000D801E8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FEB1AA294E000D801E8 /* libicucore.dylib */; };
 		8A5A9FEE1AA294E900D801E8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FED1AA294E900D801E8 /* CFNetwork.framework */; };
@@ -27,6 +25,9 @@
 		8A5AA0701AA296CF00D801E8 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA06B1AA296CF00D801E8 /* SocketIOClient.swift */; };
 		8A5AA0711AA296CF00D801E8 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA06C1AA296CF00D801E8 /* SwiftRegex.swift */; };
 		8A5AA0761AA2974B00D801E8 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA0751AA2974B00D801E8 /* SRWebSocket.m */; };
+		8AB378E51AA2A25000C12656 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB378E41AA2A25000C12656 /* FacebookSDK.framework */; };
+		8AB378EA1AA2B70600C12656 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB378E91AA2B70600C12656 /* PeopleTableViewController.swift */; };
+		8AB378EC1AA2CCF400C12656 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB378EB1AA2CCF400C12656 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,6 @@
 		8A5A9FCF1AA2545E00D801E8 /* Nearby PeopleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nearby PeopleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5A9FD41AA2545E00D801E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A5A9FD51AA2545E00D801E8 /* Nearby_PeopleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby_PeopleTests.swift; sourceTree = "<group>"; };
-		8A5A9FE21AA261B400D801E8 /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
-		8A5A9FE51AA2640100D801E8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		8A5A9FE71AA26ADC00D801E8 /* Nearby People-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nearby People-Bridging-Header.h"; sourceTree = "<group>"; };
 		8A5A9FE81AA26ADC00D801E8 /* BridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgingHeader.m; sourceTree = "<group>"; };
 		8A5A9FEB1AA294E000D801E8 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
@@ -67,6 +66,9 @@
 		8A5AA0731AA2974B00D801E8 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
 		8A5AA0741AA2974B00D801E8 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		8A5AA0751AA2974B00D801E8 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		8AB378E41AA2A25000C12656 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		8AB378E91AA2B70600C12656 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		8AB378EB1AA2CCF400C12656 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +77,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5A9FF21AA294F700D801E8 /* Foundation.framework in Frameworks */,
+				8AB378E51AA2A25000C12656 /* FacebookSDK.framework in Frameworks */,
 				8A5A9FF01AA294F000D801E8 /* Security.framework in Frameworks */,
 				8A5A9FEE1AA294E900D801E8 /* CFNetwork.framework in Frameworks */,
 				8A5A9FEC1AA294E000D801E8 /* libicucore.dylib in Frameworks */,
-				8A5A9FE61AA2640100D801E8 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				8A5A9FC11AA2545E00D801E8 /* ViewController.swift */,
-				8A5A9FE21AA261B400D801E8 /* PeopleViewController.swift */,
+				8AB378E91AA2B70600C12656 /* PeopleTableViewController.swift */,
+				8AB378EB1AA2CCF400C12656 /* ProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -174,11 +177,11 @@
 		8A5A9FE41AA263EF00D801E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AB378E41AA2A25000C12656 /* FacebookSDK.framework */,
 				8A5A9FED1AA294E900D801E8 /* CFNetwork.framework */,
 				8A5A9FF11AA294F700D801E8 /* Foundation.framework */,
 				8A5A9FEB1AA294E000D801E8 /* libicucore.dylib */,
 				8A5A9FEF1AA294F000D801E8 /* Security.framework */,
-				8A5A9FE51AA2640100D801E8 /* FacebookSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -308,14 +311,15 @@
 				8A5A9FC21AA2545E00D801E8 /* ViewController.swift in Sources */,
 				8A5AA06E1AA296CF00D801E8 /* SocketEvent.swift in Sources */,
 				8A5AA0711AA296CF00D801E8 /* SwiftRegex.swift in Sources */,
+				8AB378EA1AA2B70600C12656 /* PeopleTableViewController.swift in Sources */,
 				8A5AA06D1AA296CF00D801E8 /* SocketAckHandler.swift in Sources */,
 				8A5A9FBD1AA2545E00D801E8 /* AppDelegate.swift in Sources */,
+				8AB378EC1AA2CCF400C12656 /* ProfileViewController.swift in Sources */,
 				8A5AA0761AA2974B00D801E8 /* SRWebSocket.m in Sources */,
 				8A5A9FE91AA26ADC00D801E8 /* BridgingHeader.m in Sources */,
 				8A5AA06F1AA296CF00D801E8 /* SocketEventHandler.swift in Sources */,
 				8A5A9FC01AA2545E00D801E8 /* Nearby_People.xcdatamodeld in Sources */,
 				8A5AA0701AA296CF00D801E8 /* SocketIOClient.swift in Sources */,
-				8A5A9FE31AA261B400D801E8 /* PeopleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +449,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Nearby",
 					People,
+					"$(PROJECT_DIR)/Nearby",
+					People,
 				);
 				INFOPLIST_FILE = "Nearby People/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -461,6 +467,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Nearby",
+					People,
 					"$(PROJECT_DIR)/Nearby",
 					People,
 				);

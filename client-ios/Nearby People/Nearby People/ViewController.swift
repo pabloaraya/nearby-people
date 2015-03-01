@@ -54,6 +54,9 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         self.defaults.setObject(user.last_name, forKey: "fb_last_name")
         self.defaults.setObject(user.middle_name,   forKey: "fb_middle_name")
         self.defaults.setObject(user.hash,      forKey: "fb_hash")
+        
+        
+        
         goToHome()
     }
     
