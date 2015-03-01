@@ -33,7 +33,7 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
     public static Socket socket;
 
     /* Socket Constant */
-    final private static String SOCKET_URL  = "http://192.168.56.1/";
+    final private static String SOCKET_URL  = "http://54.86.110.206/";
     final private static String EVENT_MESSAGE = "message";
 
     public static MainFragment newInstance() {

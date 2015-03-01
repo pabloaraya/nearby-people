@@ -21,6 +21,7 @@ io.on('connection', function (socket) {
   console.log("New user!");
   socket.emit('connect', { hello: 'world' });
   socket.on('message', function (data) {
+    console.log(data);
     socket.broadcast.emit('message', data);
   });
   socket.on('disconnect', function (data) {
