@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A5A9FBD1AA2545E00D801E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FBC1AA2545E00D801E8 /* AppDelegate.swift */; };
+		8A5A9FC01AA2545E00D801E8 /* Nearby_People.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FBE1AA2545E00D801E8 /* Nearby_People.xcdatamodeld */; };
+		8A5A9FC21AA2545E00D801E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FC11AA2545E00D801E8 /* ViewController.swift */; };
+		8A5A9FC51AA2545E00D801E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A9FC31AA2545E00D801E8 /* Main.storyboard */; };
+		8A5A9FC71AA2545E00D801E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A9FC61AA2545E00D801E8 /* Images.xcassets */; };
+		8A5A9FCA1AA2545E00D801E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A9FC81AA2545E00D801E8 /* LaunchScreen.xib */; };
+		8A5A9FD61AA2545E00D801E8 /* Nearby_PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FD51AA2545E00D801E8 /* Nearby_PeopleTests.swift */; };
+		8A5A9FE31AA261B400D801E8 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FE21AA261B400D801E8 /* PeopleViewController.swift */; };
+		8A5A9FE61AA2640100D801E8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FE51AA2640100D801E8 /* FacebookSDK.framework */; };
+		8A5A9FE91AA26ADC00D801E8 /* BridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9FE81AA26ADC00D801E8 /* BridgingHeader.m */; };
+		8A5A9FEC1AA294E000D801E8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FEB1AA294E000D801E8 /* libicucore.dylib */; };
+		8A5A9FEE1AA294E900D801E8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FED1AA294E900D801E8 /* CFNetwork.framework */; };
+		8A5A9FF01AA294F000D801E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FEF1AA294F000D801E8 /* Security.framework */; };
+		8A5A9FF21AA294F700D801E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A9FF11AA294F700D801E8 /* Foundation.framework */; };
+		8A5AA06D1AA296CF00D801E8 /* SocketAckHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA0681AA296CF00D801E8 /* SocketAckHandler.swift */; };
+		8A5AA06E1AA296CF00D801E8 /* SocketEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA0691AA296CF00D801E8 /* SocketEvent.swift */; };
+		8A5AA06F1AA296CF00D801E8 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA06A1AA296CF00D801E8 /* SocketEventHandler.swift */; };
+		8A5AA0701AA296CF00D801E8 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA06B1AA296CF00D801E8 /* SocketIOClient.swift */; };
+		8A5AA0711AA296CF00D801E8 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA06C1AA296CF00D801E8 /* SwiftRegex.swift */; };
+		8A5AA0761AA2974B00D801E8 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AA0751AA2974B00D801E8 /* SRWebSocket.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A5A9FD01AA2545E00D801E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5A9FAF1AA2545E00D801E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A5A9FB61AA2545E00D801E8;
+			remoteInfo = "Nearby People";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A5A9FB71AA2545E00D801E8 /* Nearby People.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nearby People.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A5A9FBB1AA2545E00D801E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A5A9FBC1AA2545E00D801E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A5A9FBF1AA2545E00D801E8 /* Nearby_People.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nearby_People.xcdatamodel; sourceTree = "<group>"; };
+		8A5A9FC11AA2545E00D801E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A5A9FC41AA2545E00D801E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A5A9FC61AA2545E00D801E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8A5A9FC91AA2545E00D801E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8A5A9FCF1AA2545E00D801E8 /* Nearby PeopleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nearby PeopleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A5A9FD41AA2545E00D801E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A5A9FD51AA2545E00D801E8 /* Nearby_PeopleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby_PeopleTests.swift; sourceTree = "<group>"; };
+		8A5A9FE21AA261B400D801E8 /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		8A5A9FE51AA2640100D801E8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		8A5A9FE71AA26ADC00D801E8 /* Nearby People-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nearby People-Bridging-Header.h"; sourceTree = "<group>"; };
+		8A5A9FE81AA26ADC00D801E8 /* BridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgingHeader.m; sourceTree = "<group>"; };
+		8A5A9FEB1AA294E000D801E8 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		8A5A9FED1AA294E900D801E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8A5A9FEF1AA294F000D801E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8A5A9FF11AA294F700D801E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8A5AA0681AA296CF00D801E8 /* SocketAckHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckHandler.swift; sourceTree = "<group>"; };
+		8A5AA0691AA296CF00D801E8 /* SocketEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEvent.swift; sourceTree = "<group>"; };
+		8A5AA06A1AA296CF00D801E8 /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		8A5AA06B1AA296CF00D801E8 /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		8A5AA06C1AA296CF00D801E8 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		8A5AA0731AA2974B00D801E8 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		8A5AA0741AA2974B00D801E8 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		8A5AA0751AA2974B00D801E8 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A5A9FB41AA2545E00D801E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5A9FF21AA294F700D801E8 /* Foundation.framework in Frameworks */,
+				8A5A9FF01AA294F000D801E8 /* Security.framework in Frameworks */,
+				8A5A9FEE1AA294E900D801E8 /* CFNetwork.framework in Frameworks */,
+				8A5A9FEC1AA294E000D801E8 /* libicucore.dylib in Frameworks */,
+				8A5A9FE61AA2640100D801E8 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A5A9FCC1AA2545E00D801E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A5A9FAE1AA2545E00D801E8 = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FB91AA2545E00D801E8 /* Nearby People */,
+				8A5A9FD21AA2545E00D801E8 /* Nearby PeopleTests */,
+				8A5A9FB81AA2545E00D801E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A5A9FB81AA2545E00D801E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FB71AA2545E00D801E8 /* Nearby People.app */,
+				8A5A9FCF1AA2545E00D801E8 /* Nearby PeopleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A5A9FB91AA2545E00D801E8 /* Nearby People */ = {
+			isa = PBXGroup;
+			children = (
+				8A5AA0721AA2974B00D801E8 /* SocketRocket */,
+				8A5AA0671AA296CE00D801E8 /* SwiftIO */,
+				8A5A9FE41AA263EF00D801E8 /* Frameworks */,
+				8A5A9FE11AA260AE00D801E8 /* Xib */,
+				8A5A9FE01AA2609B00D801E8 /* Controllers */,
+				8A5A9FC61AA2545E00D801E8 /* Images.xcassets */,
+				8A5A9FBE1AA2545E00D801E8 /* Nearby_People.xcdatamodeld */,
+				8A5A9FBA1AA2545E00D801E8 /* Supporting Files */,
+			);
+			path = "Nearby People";
+			sourceTree = "<group>";
+		};
+		8A5A9FBA1AA2545E00D801E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FBC1AA2545E00D801E8 /* AppDelegate.swift */,
+				8A5A9FBB1AA2545E00D801E8 /* Info.plist */,
+				8A5A9FE71AA26ADC00D801E8 /* Nearby People-Bridging-Header.h */,
+				8A5A9FE81AA26ADC00D801E8 /* BridgingHeader.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A5A9FD21AA2545E00D801E8 /* Nearby PeopleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FD51AA2545E00D801E8 /* Nearby_PeopleTests.swift */,
+				8A5A9FD31AA2545E00D801E8 /* Supporting Files */,
+			);
+			path = "Nearby PeopleTests";
+			sourceTree = "<group>";
+		};
+		8A5A9FD31AA2545E00D801E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FD41AA2545E00D801E8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A5A9FE01AA2609B00D801E8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FC11AA2545E00D801E8 /* ViewController.swift */,
+				8A5A9FE21AA261B400D801E8 /* PeopleViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8A5A9FE11AA260AE00D801E8 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FC81AA2545E00D801E8 /* LaunchScreen.xib */,
+				8A5A9FC31AA2545E00D801E8 /* Main.storyboard */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		8A5A9FE41AA263EF00D801E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9FED1AA294E900D801E8 /* CFNetwork.framework */,
+				8A5A9FF11AA294F700D801E8 /* Foundation.framework */,
+				8A5A9FEB1AA294E000D801E8 /* libicucore.dylib */,
+				8A5A9FEF1AA294F000D801E8 /* Security.framework */,
+				8A5A9FE51AA2640100D801E8 /* FacebookSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A5AA0671AA296CE00D801E8 /* SwiftIO */ = {
+			isa = PBXGroup;
+			children = (
+				8A5AA0681AA296CF00D801E8 /* SocketAckHandler.swift */,
+				8A5AA0691AA296CF00D801E8 /* SocketEvent.swift */,
+				8A5AA06A1AA296CF00D801E8 /* SocketEventHandler.swift */,
+				8A5AA06B1AA296CF00D801E8 /* SocketIOClient.swift */,
+				8A5AA06C1AA296CF00D801E8 /* SwiftRegex.swift */,
+			);
+			path = SwiftIO;
+			sourceTree = SOURCE_ROOT;
+		};
+		8A5AA0721AA2974B00D801E8 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				8A5AA0731AA2974B00D801E8 /* SocketRocket-Prefix.pch */,
+				8A5AA0741AA2974B00D801E8 /* SRWebSocket.h */,
+				8A5AA0751AA2974B00D801E8 /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A5A9FB61AA2545E00D801E8 /* Nearby People */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A5A9FD91AA2545E00D801E8 /* Build configuration list for PBXNativeTarget "Nearby People" */;
+			buildPhases = (
+				8A5A9FB31AA2545E00D801E8 /* Sources */,
+				8A5A9FB41AA2545E00D801E8 /* Frameworks */,
+				8A5A9FB51AA2545E00D801E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nearby People";
+			productName = "Nearby People";
+			productReference = 8A5A9FB71AA2545E00D801E8 /* Nearby People.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A5A9FCE1AA2545E00D801E8 /* Nearby PeopleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A5A9FDC1AA2545E00D801E8 /* Build configuration list for PBXNativeTarget "Nearby PeopleTests" */;
+			buildPhases = (
+				8A5A9FCB1AA2545E00D801E8 /* Sources */,
+				8A5A9FCC1AA2545E00D801E8 /* Frameworks */,
+				8A5A9FCD1AA2545E00D801E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A5A9FD11AA2545E00D801E8 /* PBXTargetDependency */,
+			);
+			name = "Nearby PeopleTests";
+			productName = "Nearby PeopleTests";
+			productReference = 8A5A9FCF1AA2545E00D801E8 /* Nearby PeopleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A5A9FAF1AA2545E00D801E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Camila Eyzaguirre";
+				TargetAttributes = {
+					8A5A9FB61AA2545E00D801E8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					8A5A9FCE1AA2545E00D801E8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 8A5A9FB61AA2545E00D801E8;
+					};
+				};
+			};
+			buildConfigurationList = 8A5A9FB21AA2545E00D801E8 /* Build configuration list for PBXProject "Nearby People" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A5A9FAE1AA2545E00D801E8;
+			productRefGroup = 8A5A9FB81AA2545E00D801E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A5A9FB61AA2545E00D801E8 /* Nearby People */,
+				8A5A9FCE1AA2545E00D801E8 /* Nearby PeopleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A5A9FB51AA2545E00D801E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5A9FC51AA2545E00D801E8 /* Main.storyboard in Resources */,
+				8A5A9FCA1AA2545E00D801E8 /* LaunchScreen.xib in Resources */,
+				8A5A9FC71AA2545E00D801E8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A5A9FCD1AA2545E00D801E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A5A9FB31AA2545E00D801E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5A9FC21AA2545E00D801E8 /* ViewController.swift in Sources */,
+				8A5AA06E1AA296CF00D801E8 /* SocketEvent.swift in Sources */,
+				8A5AA0711AA296CF00D801E8 /* SwiftRegex.swift in Sources */,
+				8A5AA06D1AA296CF00D801E8 /* SocketAckHandler.swift in Sources */,
+				8A5A9FBD1AA2545E00D801E8 /* AppDelegate.swift in Sources */,
+				8A5AA0761AA2974B00D801E8 /* SRWebSocket.m in Sources */,
+				8A5A9FE91AA26ADC00D801E8 /* BridgingHeader.m in Sources */,
+				8A5AA06F1AA296CF00D801E8 /* SocketEventHandler.swift in Sources */,
+				8A5A9FC01AA2545E00D801E8 /* Nearby_People.xcdatamodeld in Sources */,
+				8A5AA0701AA296CF00D801E8 /* SocketIOClient.swift in Sources */,
+				8A5A9FE31AA261B400D801E8 /* PeopleViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A5A9FCB1AA2545E00D801E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5A9FD61AA2545E00D801E8 /* Nearby_PeopleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A5A9FD11AA2545E00D801E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A5A9FB61AA2545E00D801E8 /* Nearby People */;
+			targetProxy = 8A5A9FD01AA2545E00D801E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A5A9FC31AA2545E00D801E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A5A9FC41AA2545E00D801E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A5A9FC81AA2545E00D801E8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A5A9FC91AA2545E00D801E8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A5A9FD71AA2545E00D801E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A5A9FD81AA2545E00D801E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A5A9FDA1AA2545E00D801E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Nearby",
+					People,
+				);
+				INFOPLIST_FILE = "Nearby People/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nearby People/Nearby People-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A5A9FDB1AA2545E00D801E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Nearby",
+					People,
+				);
+				INFOPLIST_FILE = "Nearby People/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nearby People/Nearby People-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		8A5A9FDD1AA2545E00D801E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Nearby PeopleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nearby People.app/Nearby People";
+			};
+			name = Debug;
+		};
+		8A5A9FDE1AA2545E00D801E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Nearby PeopleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nearby People.app/Nearby People";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A5A9FB21AA2545E00D801E8 /* Build configuration list for PBXProject "Nearby People" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A5A9FD71AA2545E00D801E8 /* Debug */,
+				8A5A9FD81AA2545E00D801E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A5A9FD91AA2545E00D801E8 /* Build configuration list for PBXNativeTarget "Nearby People" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A5A9FDA1AA2545E00D801E8 /* Debug */,
+				8A5A9FDB1AA2545E00D801E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A5A9FDC1AA2545E00D801E8 /* Build configuration list for PBXNativeTarget "Nearby PeopleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A5A9FDD1AA2545E00D801E8 /* Debug */,
+				8A5A9FDE1AA2545E00D801E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8A5A9FBE1AA2545E00D801E8 /* Nearby_People.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A5A9FBF1AA2545E00D801E8 /* Nearby_People.xcdatamodel */,
+			);
+			currentVersion = 8A5A9FBF1AA2545E00D801E8 /* Nearby_People.xcdatamodel */;
+			path = Nearby_People.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8A5A9FAF1AA2545E00D801E8 /* Project object */;
+}
