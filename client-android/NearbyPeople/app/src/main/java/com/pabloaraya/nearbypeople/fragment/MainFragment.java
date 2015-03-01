@@ -13,8 +13,10 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
+import com.pabloaraya.nearbypeople.MainActivity;
 import com.pabloaraya.nearbypeople.R;
 import com.pabloaraya.nearbypeople.adapter.MainRootAdapter;
+import com.pabloaraya.nearbypeople.model.MessageChatModel;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,8 +35,7 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
     public static Socket socket;
 
     /* Socket Constant */
-    final private static String SOCKET_URL  = "http://54.86.110.206/";
-    final private static String EVENT_MESSAGE = "message";
+    final public static String SOCKET_URL  = "http://54.86.110.206/";
 
     public static MainFragment newInstance() {
         MainFragment fragment = new MainFragment();
@@ -65,32 +66,7 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
 
                 }
             });
-            socket.on(EVENT_MESSAGE, new Emitter.Listener() {
-                @Override
-                public void call(Object... args) {
-                    try {
-                        JSONObject messageJson = new JSONObject(args[0].toString());
-                        /*final MessageModel messageModel = new MessageModel(
-                                messageJson.getString(VAR_MESSAGE),
-                                messageJson.getString(VAR_NAME));
 
-                        Thread thread = new Thread() {
-                            @Override
-                            public void run() {
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        messageAdapter.addMessage(messageModel);
-                                    }
-                                });
-                            }
-                        };
-                        thread.start();*/
-                    }catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
             socket.connect();
         } catch (URISyntaxException e) {
             e.printStackTrace();

@@ -2,44 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:id="@+id/jhk">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentEnd="false"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="8dp">
-
-        <com.makeramen.RoundedImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:src="@drawable/avatar_default_circular"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:scaleType="fitCenter"
-            android:layout_gravity="bottom"
-            app:riv_corner_radius="30dip"
-            app:riv_mutate_background="true"
-            app:riv_oval="true"
-            android:layout_marginBottom="8dp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp">
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        card_view:cardBackgroundColor="#FFF"
+        card_view:cardBackgroundColor="@color/app_color_second"
         card_view:cardCornerRadius="4dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:layout_gravity="right"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="1dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -56,13 +44,6 @@
                 android:text="Message"
                 android:id="@+id/textViewMessage"
                 android:textColor="#000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:id="@+id/textViewName"
-                android:textSize="10sp" />
 
         </LinearLayout>
 

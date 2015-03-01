@@ -3,12 +3,14 @@ package com.pabloaraya.nearbypeople.adapter;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.pabloaraya.nearbypeople.R;
 import com.pabloaraya.nearbypeople.model.MessageChatModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +34,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapterHolder>{
 
     @Override
     public MessageAdapterHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_message, null);
+        View view;
+        if(i == 0){
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_message_mine, null);
+        } else{
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_message, null);
+        }
         MessageAdapterHolder mh = new MessageAdapterHolder(view);
         return mh;
     }
@@ -45,7 +52,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapterHolder>{
 
         /* Set elements */
         messageHolder.textViewMessage.setText(message.getUserMessage());
-        messageHolder.textViewName.setText(message.getUserName());
+
+        if(!message.isMine()) {
+            messageHolder.textViewName.setText(message.getUserName());
+            Picasso.with(context).load(message.getUserAvatar()).into(messageHolder.circleImageAvatar);
+        }
     }
 
     @Override
@@ -74,5 +85,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapterHolder>{
             messages.add(message);
         }
         notifyDataSetChanged();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if(messages.get(position).isMine()){
+            return 0;
+        }else{
+            return 1;
+        }
     }
 }
