@@ -24,7 +24,7 @@ public class MainRootAdapter extends FragmentPagerAdapter {
 
     private int[] imageResId = {
             R.drawable.ic_action_people,
-            R.drawable.ic_action_chat,
+            //R.drawable.ic_action_chat,
             R.drawable.ic_action_profile
     };
 
@@ -42,9 +42,9 @@ public class MainRootAdapter extends FragmentPagerAdapter {
         switch(position) {
             case 0:
                 return NearbyPeopleFragment.newInstance();
+            //case 1:
+            //    return PrivateRoomFragment.newInstance();
             case 1:
-                return PrivateRoomFragment.newInstance();
-            case 2:
                 return ProfileFragment.newInstance();
         }
 
@@ -53,7 +53,7 @@ public class MainRootAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     @Override
@@ -61,13 +61,16 @@ public class MainRootAdapter extends FragmentPagerAdapter {
         switch (position){
             case 0:
                 return "Nearby People";
+            //case 1:
+            //    return "Private Messages";
             case 1:
-                return "Private Messages";
-            case 2:
                 return "Profile";
         }
         return null;
     }
 
+    public int getIcon(int i){
+        return imageResId[i];
+    }
 }
 

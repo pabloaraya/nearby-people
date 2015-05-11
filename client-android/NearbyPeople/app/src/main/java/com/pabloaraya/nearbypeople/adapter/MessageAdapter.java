@@ -23,6 +23,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapterHolder>{
     private Context context;
     private List<MessageChatModel> messages;
 
+    private final static int VIEW_LAYOUT_MINE_MESSAGE = 0;
+    private final static int VIEW_LAYOUT_MESSAGE = 1;
+
     /* Typeface */
     private Typeface robotoLight;
 
@@ -35,7 +38,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapterHolder>{
     @Override
     public MessageAdapterHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view;
-        if(i == 0){
+        if(i == VIEW_LAYOUT_MINE_MESSAGE){
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_message_mine, null);
         } else{
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_message, null);
@@ -72,12 +75,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapterHolder>{
             /* verify equals */
             if (message.getUserId().equals(lastMessage.getUserId())) {
 
-                /* Concat the two messages */
-                String concat = lastMessage.getUserMessage()
+                /* Concatenate the two messages */
+                String concatenate = lastMessage.getUserMessage()
                         .concat("\n")
                         .concat(message.getUserMessage());
 
-                messages.get(getItemCount() - 1).setUserMessage(concat);
+                messages.get(getItemCount() - 1).setUserMessage(concatenate);
             } else {
                 messages.add(message);
             }
@@ -90,9 +93,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapterHolder>{
     @Override
     public int getItemViewType(int position) {
         if(messages.get(position).isMine()){
-            return 0;
+            return VIEW_LAYOUT_MINE_MESSAGE;
         }else{
-            return 1;
+            return VIEW_LAYOUT_MESSAGE;
         }
     }
 }

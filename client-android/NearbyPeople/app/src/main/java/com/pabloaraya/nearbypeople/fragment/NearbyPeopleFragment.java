@@ -80,6 +80,8 @@ public class NearbyPeopleFragment extends Fragment {
                                 @Override
                                 public void run() {
                                     messageAdapter.addMessage(messageModel);
+                                    recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1);
+
                                 }
                             });
                         }
@@ -103,7 +105,7 @@ public class NearbyPeopleFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         linearLayoutManager = new LinearLayoutManager(getActivity());
-        linearLayoutManager.setReverseLayout(true);
+        //linearLayoutManager.setReverseLayout(true);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         /* Set adapter */
@@ -118,19 +120,18 @@ public class NearbyPeopleFragment extends Fragment {
                 if(!editTextMessage.getText().toString().isEmpty()){
                     JSONObject messageJson = new JSONObject();
                     try {
-                        messageJson.put(VAR_USER_ID, "1");
-                        messageJson.put(VAR_NAME, "Pablo");
-                        messageJson.put(VAR_AVATAR,"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p50x50/10959765_10205056274063138_8313510093762556398_n.jpg?oh=22926ba5d234c01aa18d8bc0637814b7&oe=55492466&__gda__=1431093888_bafbd3624f08d28d9e0ffc4c3d41af0e");
+                        messageJson.put(VAR_USER_ID, "2");
+                        messageJson.put(VAR_NAME, "Camila");
+                        messageJson.put(VAR_AVATAR,"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p50x50/10959765_10205056274063138_8313510093762556398_n.jpg?oh=22926ba5d234c01aa18d8bc0637814b7&oe=55492466&__gda__=1433685888_5d33b5ee10522bdabb1fe6994b485f6e");
                         messageJson.put(VAR_MESSAGE, editTextMessage.getText().toString());
                         messageJson.put(VAR_IS_MINE, true);
-
 
                         MainFragment.socket.emit(EVENT_MESSAGE, messageJson);
 
                         MessageChatModel messageModel = new MessageChatModel();
-                        messageModel.setUserId("1");
-                        messageModel.setUserAvatar("https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p50x50/10959765_10205056274063138_8313510093762556398_n.jpg?oh=22926ba5d234c01aa18d8bc0637814b7&oe=55492466&__gda__=1431093888_bafbd3624f08d28d9e0ffc4c3d41af0e");
-                        messageModel.setUserName("Pablo");
+                        messageModel.setUserId("2");
+                        messageModel.setUserAvatar("https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p50x50/10959765_10205056274063138_8313510093762556398_n.jpg?oh=22926ba5d234c01aa18d8bc0637814b7&oe=55492466&__gda__=1433685888_5d33b5ee10522bdabb1fe6994b485f6e");
+                        messageModel.setUserName("Camila");
                         messageModel.setUserMessage(editTextMessage.getText().toString());
                         messageModel.setMine(true);
 

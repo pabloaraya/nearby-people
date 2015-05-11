@@ -1,28 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.pabloaraya.nearbypeople.fragment.NearbyPeopleFragment">
 
-    <LinearLayout
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.pabloaraya.nearbypeople.fragment.NearbyPeopleFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/listViewChat"
         android:layout_marginBottom="50dp"
         android:stackFromBottom="true"
-        android:transcriptMode="alwaysScroll" />
+        android:transcriptMode="alwaysScroll"
+        android:windowSoftInputMode="adjustResize" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="-50dp"
         android:background="#FFF"
-        android:alpha="0.9">
+        android:alpha="0.9"
+        android:layout_alignParentBottom="true">
 
         <EditText
             android:layout_width="match_parent"
@@ -45,6 +44,4 @@
             android:padding="7dp" />
 
     </LinearLayout>
-    </LinearLayout>
-
-</FrameLayout>
+    </RelativeLayout>

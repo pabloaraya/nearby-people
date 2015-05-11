@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 22
     buildToolsVersion "21.1.2"
 
     defaultConfig {
@@ -31,6 +31,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:+'
     compile 'com.android.support:support-v4:21.0.+'
     compile 'com.astuetz:pagerslidingtabstrip:+'
+    compile 'it.neokree:MaterialTabs:0.11'
     compile 'com.makeramen:roundedimageview:1.5.0'
     compile('com.github.androidsocialnetworks:library:0.3.7@aar') {
         transitive = true

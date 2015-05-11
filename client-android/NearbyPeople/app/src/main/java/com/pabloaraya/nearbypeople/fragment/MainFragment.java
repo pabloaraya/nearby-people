@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.github.nkzawa.emitter.Emitter;
@@ -23,11 +25,17 @@ import org.json.JSONObject;
 
 import java.net.URISyntaxException;
 
-public class MainFragment extends Fragment implements ViewPager.OnPageChangeListener{
+import it.neokree.materialtabs.MaterialTab;
+import it.neokree.materialtabs.MaterialTabHost;
+import it.neokree.materialtabs.MaterialTabListener;
+
+public class MainFragment extends Fragment implements MaterialTabListener {
 
     private Toolbar toolbar;
     private PagerSlidingTabStrip tabs;
     private ViewPager mViewPager;
+
+    MaterialTabHost tabHost;
 
     private MainRootAdapter chatListAdapter;
 
@@ -35,7 +43,8 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
     public static Socket socket;
 
     /* Socket Constant */
-    final public static String SOCKET_URL  = "http://54.86.110.206/";
+    //final public static String SOCKET_URL  = "http://54.86.110.206/";
+    final public static String SOCKET_URL  = "http://192.168.56.1/";
 
     public static MainFragment newInstance() {
         MainFragment fragment = new MainFragment();
@@ -51,6 +60,7 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
         super.onCreate(savedInstanceState);
 
         chatListAdapter = new MainRootAdapter(getActivity(), getChildFragmentManager());
+        // TODO: Only we need one more time, to add
 
         try {
             socket = IO.socket(SOCKET_URL);
@@ -58,12 +68,13 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
                 @Override
                 public void call(Object... args) {
 
+                    // TODO: There is the magic!
                 }
             });
             socket.on(Socket.EVENT_DISCONNECT, new Emitter.Listener() {
                 @Override
                 public void call(Object... args) {
-
+                    // TODO: Here the game is over
                 }
             });
 
@@ -84,10 +95,28 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
             ((ActionBarActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         }
 
+        tabHost = (MaterialTabHost)view.findViewById(R.id.materialTabHost);
+
         mViewPager = (ViewPager) view.findViewById(R.id.pagerChat);
         mViewPager.setAdapter(chatListAdapter);
+        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                // when user do a swipe the selected tab change
+                tabHost.setSelectedNavigationItem(position);
+            }
+        });
 
-        tabs = (PagerSlidingTabStrip)view.findViewById(R.id.tabs);
+        // insert all tabs from pagerAdapter data
+        for (int i = 0; i < chatListAdapter.getCount(); i++) {
+            tabHost.addTab(
+                    tabHost.newTab()
+                            .setIcon(getResources().getDrawable(chatListAdapter.getIcon(i)))
+                            .setTabListener(this)
+            );
+        }
+
+        /*tabs = (PagerSlidingTabStrip)view.findViewById(R.id.tabs);
         tabs.setIndicatorHeight(5);
         tabs.setIndicatorColorResource(android.R.color.white);
         tabs.setBackgroundResource(R.color.app_color);
@@ -95,24 +124,23 @@ public class MainFragment extends Fragment implements ViewPager.OnPageChangeList
 
         //tabs.setShouldExpand(true);
         tabs.setOnPageChangeListener(this);
-        tabs.setViewPager(mViewPager);
+        tabs.setViewPager(mViewPager);*/
 
         return view;
     }
 
+    @Override
+    public void onTabSelected(MaterialTab materialTab) {
+        mViewPager.setCurrentItem(materialTab.getPosition());
+    }
 
     @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    public void onTabReselected(MaterialTab materialTab) {
 
     }
 
     @Override
-    public void onPageSelected(int position) {
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
+    public void onTabUnselected(MaterialTab materialTab) {
 
     }
 }
